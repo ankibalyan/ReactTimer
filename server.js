@@ -3,6 +3,12 @@ const app = express();
 
 const PORT = 9000;
 
+app.get('*.js', function (req, res, next) {
+  req.url = req.url + '.gz';
+  res.set('Content-Encoding', 'gzip');
+  next();
+});
+
 app.use((req, res, next) => {
   if (req.headers['x-forwarded-proto'] === 'https') {
     res.redirect(`http://${req.hostname}${req.url}`);

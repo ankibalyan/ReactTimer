@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -11,9 +12,23 @@ module.exports = {
     jquery: 'jQuery'
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
     new webpack.ProvidePlugin({
       '$': 'jquery',
       'jQuery': 'jquery'
+    }),
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.optimize.MinChunkSizePlugin({minChunkSize: 10000}),
+    new CompressionPlugin({
+      asset: "[path].gz[query]",
+      algorithm: "gzip",
+      test: /\.js$|\.css$|\.html$/,
+      threshold: 10240,
+      minRatio: 0.8
     })
   ],
   output: {
@@ -42,5 +57,6 @@ module.exports = {
         exclude: /node_modules/
       }
     ]
-  }
+  },
+  devtool: 'cheap-module-source-map'
 };
