@@ -25,7 +25,10 @@ module.exports = {
     modules: [
       path.resolve(__dirname, "src"),
       'node_modules'
-    ]
+    ],
+    alias: {
+      AppStyles: path.resolve(__dirname, 'src/styles/app.scss')
+    }
   },
   module: {
     loaders: [
