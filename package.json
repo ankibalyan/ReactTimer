@@ -1,0 +1,8 @@
+{
+  "name": "ReactTimerApp",
+  "version": "1.0.0",
+  "description": "A timer app written in reactJs.",
+  "main": "index.js",
+  "author": "Ankit Kumar <ankit.kr.balyan@gmail.com>",
+  "license": "MIT"
+}
