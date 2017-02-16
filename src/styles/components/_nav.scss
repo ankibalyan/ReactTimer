@@ -1,7 +1,15 @@
 .top-bar, .top-bar ul{
-  background-color: $grey;
+  background-color: $nav-background;
 }
-
-.menu .menu-text a {
-  display: inline;
+.top-bar {
+  a{
+    color: $nav-link-color;
+  }
+  .menu-text{
+    color: $nav-text-color;
+    a {
+      display: inline;
+      padding: 0;
+    }
+  }
 }
