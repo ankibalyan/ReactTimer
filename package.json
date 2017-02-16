@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A timer app written in reactJs.",
   "main": "index.js",
+  "repository": "https://github.com/ankibalyan/ReactTimer.git",
   "author": "Ankit Kumar <ankit.kr.balyan@gmail.com>",
   "license": "MIT",
   "scripts": {
