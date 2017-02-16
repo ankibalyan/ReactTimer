@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, IndexLink } from 'react-router';
 
 const Nav = () => {
   return (
@@ -8,10 +8,10 @@ const Nav = () => {
         <ul className="menu">
           <li className="menu-text">React Timer</li>
           <li>
-            <Link to="/">Timer</Link>
+            <IndexLink to="/" activeClassName="active-link">Timer</IndexLink>
           </li>
           <li>
-            <Link to="/countdown">Countdown</Link>
+            <Link to="/countdown" activeClassName="active-link">Countdown</Link>
           </li>
         </ul>
       </div>

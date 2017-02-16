@@ -12224,8 +12224,8 @@ var Nav = function Nav() {
           'li',
           null,
           _react2.default.createElement(
-            _reactRouter.Link,
-            { to: '/' },
+            _reactRouter.IndexLink,
+            { to: '/', activeClassName: 'active-link' },
             'Timer'
           )
         ),
@@ -12234,7 +12234,7 @@ var Nav = function Nav() {
           null,
           _react2.default.createElement(
             _reactRouter.Link,
-            { to: '/countdown' },
+            { to: '/countdown', activeClassName: 'active-link' },
             'Countdown'
           )
         )
@@ -12341,7 +12341,7 @@ exports = module.exports = __webpack_require__(67)();
 
 
 // module
-exports.push([module.i, ".top-bar, .top-bar ul {\n  background-color: #766456; }\n\n.top-bar a {\n  color: orange; }\n\n.top-bar .menu-text {\n  color: white; }\n  .top-bar .menu-text a {\n    display: inline;\n    padding: 0; }\n\n.page-title {\n  margin: 2rem 0; }\n", ""]);
+exports.push([module.i, ".top-bar, .top-bar ul {\n  background-color: #766456; }\n\n.top-bar a {\n  color: orange; }\n\n.top-bar .active-link {\n  font-weight: bold; }\n\n.top-bar .menu-text {\n  color: white; }\n  .top-bar .menu-text a {\n    display: inline;\n    padding: 0; }\n\n.page-title {\n  margin: 2rem 0; }\n", ""]);
 
 // exports
 
