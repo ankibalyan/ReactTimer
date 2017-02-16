@@ -7,7 +7,9 @@
   "author": "Ankit Kumar <ankit.kr.balyan@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node server.js"
+    "build": "node_modules/.bin/webpack",
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "express": "^4.14.1",
