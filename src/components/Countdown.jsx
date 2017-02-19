@@ -1,10 +1,14 @@
 import React from 'react';
+import { Clock } from 'Components';
 
 const Countdown = () => {
   return (
-    <h2 className="text-center page-title">
-      Countdown component
-    </h2>
+    <div>
+      <h2 className="text-center page-title">
+        Countdown
+      </h2>
+      <Clock totalSeconds={0} />
+    </div>
   );
 }
 

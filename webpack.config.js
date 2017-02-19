@@ -58,6 +58,6 @@ module.exports = {
       }
     ]
   },
-  // devtool: 'cheap-module-source-map'
-  devtool: 'sourcemap'
+  devtool: 'cheap-module-source-map'
+  // devtool: 'source-map'
 };
