@@ -32,6 +32,33 @@ describe('Countdown', () => {
         expect(countdown.state('count')).toBe(0);
         done();
       },3000);
-    })
+    });
+
+    it('should pause countdown on paused status', done => {
+      const countdown = mount(<Countdown />);
+      countdown.instance().setCountdown(3);
+      countdown.instance().updateStatus('paused');
+
+      setTimeout(() => {
+        expect(countdown.state('count')).toBe(3);
+        expect(countdown.state('countdownStatus')).toBe('paused');
+        done();
+      }, 1001);
+
+    });
+
+    it('should stop countdown on stopped status', done => {
+      const countdown = mount(<Countdown />);
+      countdown.instance().setCountdown(3);
+      countdown.instance().updateStatus('stopped');
+
+      setTimeout(() => {
+        expect(countdown.state('count')).toBe(0);
+        expect(countdown.state('countdownStatus')).toBe('stopped');
+        done();
+      }, 1001);
+
+    });
+
   });
 });

@@ -9,7 +9,9 @@
   "scripts": {
     "build": "node_modules/.bin/webpack",
     "start": "node server.js",
-    "test": "node_modules/.bin/karma start"
+    "test": "node_modules/.bin/karma start",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "express": "^4.14.1",
@@ -43,6 +45,7 @@
     "sass-loader": "^6.0.0",
     "script-loader": "^0.7.0",
     "style-loader": "^0.13.1",
-    "webpack": "^2.2.1"
+    "webpack": "^2.2.1",
+    "@kadira/storybook": "^2.21.0"
   }
 }

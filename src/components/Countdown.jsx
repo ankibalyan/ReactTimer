@@ -26,7 +26,6 @@ class Countdown extends Component {
   startTimer() {
     this.timer  = setInterval(() => {
       let newCount = this.state.count - 1;
-
       this.setState({
         count: newCount >= 0 ? newCount : 0
       });
@@ -71,7 +70,8 @@ class Countdown extends Component {
       }
     }
     return (
-      <div>
+      <div className="pageContainer">
+        <h2 className="text-center page-title">Countdown App</h2>
         <Clock totalSeconds={count} />
         <div>
           {renderControlArea()}
