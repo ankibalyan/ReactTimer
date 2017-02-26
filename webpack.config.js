@@ -47,11 +47,31 @@ module.exports = {
     }
   },
   module: {
+    rules: [{
+      test: /\.jsx?$/,
+      exclude: /node_modules/,
+      loader: 'babel-loader',
+      query: {
+        presets: ['es2015', 'react']
+      }
+    },{
+      test: /\.scss$/,
+      use: [
+        {
+          loader: 'sass-loader',
+          options: {
+            includePaths: [
+              path.resolve(__dirname, 'node_modules/foundation-sites/scss')
+            ]
+          }
+        }
+      ]
+    }],
     loaders: [
       {
         loader: 'babel-loader',
         query: {
-          presets: ['es2015', 'react']
+          presets: ['es2015', 'react', { modules: false}]
         },
         test: /\.jsx?$/,
         exclude: /node_modules/
